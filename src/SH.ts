@@ -36,12 +36,8 @@ class SH extends eui.Component implements  eui.UIComponent {
 		this.updateContent(null);
 	}
 	private oldCenter:number = 0;
-	private oldH = 0;
 	private updateContent(evt:eui.UIEvent){
 		const sp = 333/2;
-		if(this.oldH==this.scroller.viewport.scrollH){
-			return;
-		}
 		var center = Math.round((this.scroller.viewport.scrollH+333)/(333/2));
 		var i=0;
 		for(i=0;i<this.group.numChildren;i++){
@@ -68,9 +64,6 @@ class SH extends eui.Component implements  eui.UIComponent {
 			}
 
 			child.scaleX=child.scaleY = scale;
-			// this.startChildren[i].scaleX=this.startChildren[i].scaleY = scale;
-			
-			
 		}
 		if(this.oldCenter!=center){
 			const max = this.group.numChildren;
@@ -88,7 +81,6 @@ class SH extends eui.Component implements  eui.UIComponent {
 			}
 		}
 		this.oldCenter = center;
-		this.oldH = this.scroller.viewport.scrollH;
 	}
 	private autoScrolling=false;
     private targetScrollH = 0;
