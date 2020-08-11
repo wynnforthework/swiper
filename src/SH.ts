@@ -95,10 +95,13 @@ class SH extends eui.Component implements  eui.UIComponent {
 	private onScrollEnd(evt:eui.UIEvent):void{
 		const gap = 333/2;
         var a = Math.round(this.scroller.viewport.scrollH/gap);
-        this.targetScrollH = a*gap;
+		this.targetScrollH = a*gap;
+		this.oldCenterIndex += 8-this.oldCenter;
         this.autoScrolling = true;
 	}
-	private onTick(frameTime: number) {
+	
+	private oldCenterIndex = 0;
+    private onTick(frameTime: number) {
         if (this.autoScrolling) {
             this.scroller.scrollPolicyH = eui.ScrollPolicy.OFF;
             if(this.scroller.viewport.scrollH>this.targetScrollH+10){
@@ -109,6 +112,15 @@ class SH extends eui.Component implements  eui.UIComponent {
                 this.scroller.viewport.scrollH = this.targetScrollH;
                 this.autoScrolling = false;
                 this.scroller.scrollPolicyH = eui.ScrollPolicy.ON;
+                const max = this.group.numChildren;
+                // const dataCount = this.dataArr.length;
+		        const gap = 333/2;
+                this.scroller.viewport.scrollH = gap*6;
+                for(var i=0;i<max;i++){
+                    var child:any = this.startChildren[i];
+                    // var ind = (dataCount+i-this.oldCenterIndex%dataCount)%dataCount;
+                    // child.card.source = this.dataArr[ind].image;
+                }
 		        this.updateContent(null);
             }
         }
