@@ -17,7 +17,8 @@ class SH extends eui.Component implements  eui.UIComponent {
 		}
 		this.scroller.width = gap*6;
 		this.scroller.addEventListener(eui.UIEvent.CHANGE,this.updateContent,this);
-		
+		this.scroller.addEventListener(eui.UIEvent.CHANGE_END,this.onScrollEnd,this);
+		egret.Ticker.getInstance().unregister(this.onTick, this);
 	}
 	
 	
@@ -89,4 +90,27 @@ class SH extends eui.Component implements  eui.UIComponent {
 		this.oldCenter = center;
 		this.oldH = this.scroller.viewport.scrollH;
 	}
+	private autoScrolling=false;
+    private targetScrollH = 0;
+	private onScrollEnd(evt:eui.UIEvent):void{
+		const gap = 333/2;
+        var a = Math.round(this.scroller.viewport.scrollH/gap);
+        this.targetScrollH = a*gap;
+        this.autoScrolling = true;
+	}
+	private onTick(frameTime: number) {
+        if (this.autoScrolling) {
+            this.scroller.scrollPolicyH = eui.ScrollPolicy.OFF;
+            if(this.scroller.viewport.scrollH>this.targetScrollH+10){
+                this.scroller.viewport.scrollH -= 10;
+            } else if(this.scroller.viewport.scrollH<this.targetScrollH-10){
+                this.scroller.viewport.scrollH += 10;
+            } else {
+                this.scroller.viewport.scrollH = this.targetScrollH;
+                this.autoScrolling = false;
+                this.scroller.scrollPolicyH = eui.ScrollPolicy.ON;
+		        this.updateContent(null);
+            }
+        }
+    }
 }
