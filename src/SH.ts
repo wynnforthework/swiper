@@ -99,7 +99,16 @@ class SH extends eui.Component implements  eui.UIComponent {
 		this.oldCenterIndex += 8-this.oldCenter;
         this.autoScrolling = true;
 	}
-	
+	private moveLeft():void{
+        this.oldCenterIndex++;
+        this.targetScrollH = this.scroller.viewport.scrollH - 333/2;;
+        this.autoScrolling = true;
+    }
+	private moveRight():void{
+        this.oldCenterIndex--;
+        this.targetScrollH = this.scroller.viewport.scrollH + 333/2;;
+        this.autoScrolling = true;
+    }
 	private oldCenterIndex = 0;
     private onTick(frameTime: number) {
         if (this.autoScrolling) {
