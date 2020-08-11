@@ -89,15 +89,4 @@ class SH extends eui.Component implements  eui.UIComponent {
 		this.oldCenter = center;
 		this.oldH = this.scroller.viewport.scrollH;
 	}
-	private getRealIndex(j:number){
-		var result = 0;
-		var i=0;
-		for(i=0;i<this.startChildren.length;i++){
-			if(this.startChildren[i].name==(""+j)){
-				result = i;
-				break;
-			}
-		}
-		return result;
-	}
 }
