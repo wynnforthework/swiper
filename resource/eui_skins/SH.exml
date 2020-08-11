@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SHSkin" width="1335" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="173cb1f7031" ></w:Config>
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Scroller id="scroller" width="1115.33" height="508" anchorOffsetX="0" anchorOffsetY="0" bounces="false" horizontalCenter="0" verticalCenter="0">
+			<e:Group id="group" anchorOffsetX="0" width="640.33" scrollH="832.5">
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0xff3d3d" strokeWeight="10" strokeAlpha="1"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0xff850f" strokeWeight="10" strokeColor="0x000000"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0xfff223" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0xbaf711" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0x86ff30" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0x3eb210" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0x208c12" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0x16cca8" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0x0e8db5" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0x1911b2" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0x320b82" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0xc919ea" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0xf713c3" strokeWeight="10"/>
+				<e:Rect width="333" height="317.46" x="118" rotation="0" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" fillColor="0xdb2346" strokeColor="0x000000" strokeWeight="10"/>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>
