@@ -6,6 +6,8 @@
 #### 使用框架
 以下是实现细节既然用到滑动，egret的eui库有scroll，game库有scrollview。这里用的是scroll。如果你用的是game库，可能有差异。
 
+#### 效果预览
+![](https://docimg7.docs.qq.com/image/nfBMAuA9HojUAaLOrChLrA)  
 
 #### 代码实现
 > 主要的难点有2个，中间大两边小，两边遮挡。
